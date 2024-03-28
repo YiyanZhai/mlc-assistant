@@ -1,5 +1,5 @@
 # Install MLC LLM packages
-if python -c "from mlc_chat import ChatModule" &> /dev/null; then
+if python -c "from mlc_llm import ChatModule" &> /dev/null; then
     echo "MLC packages are present, skipping install."
 else
     echo "Installing MLC packages"
@@ -19,4 +19,4 @@ fi
 
 # Start the local server
 cd mlc-llm
-python -m mlc_chat.rest --model Mistral-7B-Instruct-v0.2-q4f16_1
+python -m mlc_llm.rest --model Mistral-7B-Instruct-v0.2-q4f16_1
